@@ -1,1 +1,9 @@
-<h1>i am /users</h1>
+<!-- <h1>i am /users</h1> -->
+
+<% @user.each do |user| %>
+<div>
+<h3><%= user.first_name %></h3>
+<h3><%= user.last_name %></h3>
+<h3><%= user.role %></h3>
+</div>
+<% end %>

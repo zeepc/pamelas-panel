@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2018_05_03_151959) do
   end
 
   create_table "courses", force: :cascade do |t|
-    t.string "type"
+    t.string "name"
     t.integer "total_hrs"
   end
 
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2018_05_03_151959) do
   create_table "students", force: :cascade do |t|
     t.integer "user_id"
     t.integer "cohort_id"
+    t.string "grade"
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,7 +49,7 @@ ActiveRecord::Schema.define(version: 2018_05_03_151959) do
     t.string "password"
     t.integer "age"
     t.string "degree"
-    t.string "type"
+    t.string "role"
   end
 
 end

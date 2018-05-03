@@ -1,5 +1,7 @@
 class StudentsController < ApplicationController
 
+	layout 'layout'
+
 	def index
 		puts "i am in path /students"
 	end

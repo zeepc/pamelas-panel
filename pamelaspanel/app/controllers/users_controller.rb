@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
 
+	layout 'layout'
+
 	def index
-		puts "i am in path /users"
+		# puts "i am in path /users"
+		@user =User.all
 	end
 
 
 	def  show
-		puts "I am in /users/id route"
+		@user = User.find(params[:id])
+		# puts "I am in /users/id route"
 	end
 end

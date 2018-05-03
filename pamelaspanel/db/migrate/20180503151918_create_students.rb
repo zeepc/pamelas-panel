@@ -3,6 +3,7 @@ class CreateStudents < ActiveRecord::Migration[5.2]
     create_table :students do |t|
     	t.integer :user_id
     	t.integer :cohort_id
+    	t.string :grade
     end
   end
 end
