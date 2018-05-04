@@ -1,1 +1,6 @@
-<h1>i am /cohorts/id</h1>
+<% @cohort.each do |cohort| %>
+<div>
+<h3><%= cohort.name %></h3>
+<h3><%= cohort.start %></h3> to <h3><%= cohort.end %></h3>
+</div>
+<% end %>

@@ -1,0 +1,11 @@
+<%= form_for @cohort do |f| %>  
+    <%= f.label :name %>  
+    <%= f.text_field :name %>  
+    <%= f.label :start %>  
+    <%= f.number_field :start %>
+    <%= f.label :end %>  
+    <%= f.number_field :end %>
+    <%= f.label :course_id %>  
+    <%= f.number_field :course_id %>
+    <%= f.submit %>
+<% end %>
