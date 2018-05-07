@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
-	layout 'layout'
+	# layout 'layout'
 	
 	def index
 		puts "i am in path /employees"

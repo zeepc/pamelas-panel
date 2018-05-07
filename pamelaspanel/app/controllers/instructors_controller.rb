@@ -1,10 +1,10 @@
 class InstructorsController < ApplicationController
 
 	
-	layout 'layout'
+	# layout 'layout'
 	
 	def index
-		@instructor = User.find(role: "Instructor")
+		@instructor = User.where(role: "Instructor")
 	end
 
 
@@ -39,10 +39,6 @@ class InstructorsController < ApplicationController
         Course.find(params[:id]).destroy
         redirect_to '/cohorts'
     end
-
-
-
-
 
 
 	private

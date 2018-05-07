@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	layout 'layout'
+	# layout 'layout'
 
 	def index
 		# puts "i am in path /users"
@@ -14,8 +14,7 @@ class UsersController < ApplicationController
 	end
 
 	def new
-		@user =User.new
-		
+		@user =User.new	
 	end
 
 	def create

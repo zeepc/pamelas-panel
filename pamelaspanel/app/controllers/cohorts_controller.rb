@@ -1,6 +1,6 @@
 class CohortsController < ApplicationController
 	
-	layout 'layout'
+	# layout 'layout'
 	
 	def index
 		puts "i am in path /COHORTS"

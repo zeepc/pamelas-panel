@@ -2,9 +2,9 @@
     <%= f.label :name %>  
     <%= f.text_field :name, value: @cohort.name %>  
     <%= f.label :start %>  
-    <%= f.text_field :start , value: @cohort.start %>
+    <%= f.date_field :start , value: @cohort.start %>
     <%= f.label :end %>  
-    <%= f.text_field :end , value: @cohort.end %>
+    <%= f.date_field :end , value: @cohort.end %>
     <%= f.label :course_id %>  
     <%= f.number_field :course_id , value: @cohort.course_id %>
     <%= f.submit %>
