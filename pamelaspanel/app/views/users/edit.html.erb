@@ -1,4 +1,8 @@
-<%= form_for @user do |f| %>  
+
+
+
+
+<%= form_for @user, url: user_path, html: { multipart: true } do |f| %>  
     <%= f.label :first_name %>  
     <%= f.text_field :first_name, value: @user.first_name %>  
     <%= f.label :last_name %>  
@@ -13,8 +17,11 @@
     <%= f.text_field :degree, value: @user.degree %>
     <%= f.label :role %>  
     <%= f.text_field :role, value: @user.role %>
+    <%= f.label :avatar %> 
+    <%= f.file_field :avatar, value: @user.avatar_file_name %>
     <%= f.submit %>
 <% end %>
 
 
 <%= link_to 'Delete', user_path(@user), method: :delete %> 
+

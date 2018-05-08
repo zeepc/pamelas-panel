@@ -4,13 +4,13 @@ class InstructorsController < ApplicationController
 	# layout 'layout'
 	
 	def index
-		@instructor = User.where(role: "Instructor")
+		@instructor = User.where(role: 'Instructor')
 	end
 
 
 	def  show
-		@instructor = Instructor.find(params[:id])
-		@user_instructor = User.find_by(params[:role])
+		# @instructor = User.where(role: 'Instructor')
+		# @user_instructor = User.where(role: 'Instructor')
 	end
 
 	def new
@@ -19,25 +19,25 @@ class InstructorsController < ApplicationController
 	end
 
 	def create
-		@instructor = Instructor.create(cohort_params)
-		redirect_to '/cohorts'
+		@instructor = User.create(cohort_params)
+		redirect_to '/instructors'
 	end
 
 
     def edit 
-        @cohort = Cohort.find(params[:id])
+        @instructor = User.find(params[:id])
     end
 
     def update
-        @cohort = Cohort.find(params[:id])
-        @cohort.update(cohort_params)
-        redirect_to '/cohorts'
+        @instructor = User.find(params[:id])
+        @instructor.update(cohort_params)
+        redirect_to '/instructors'
     end
 
 
     def destroy
-        Course.find(params[:id]).destroy
-        redirect_to '/cohorts'
+        User.find(params[:id]).destroy
+        redirect_to '/instructors'
     end
 
 
@@ -46,7 +46,7 @@ class InstructorsController < ApplicationController
     # just a good pattern since you'll be able to reuse the same permit
     # list between create and update. Also, you can specialize this method
     # with per-user checking of permissible attributes.
-    def cohort_params
-      params.require(:cohort).permit(:name, :start, :end , :course_id)
+ def user_params
+      params.require(:user).permit(:first_name, :last_name, :email , :password, :age, :degree, :role, :avatar)
     end
 end

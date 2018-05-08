@@ -15,6 +15,7 @@ class CohortsController < ApplicationController
 
 	def new
 		@cohort = Cohort.new
+		@course = Course.all
 		
 	end
 
@@ -39,10 +40,6 @@ class CohortsController < ApplicationController
         Course.find(params[:id]).destroy
         redirect_to '/cohorts'
     end
-
-
-
-
 
 
 	private

@@ -1,3 +1,18 @@
+/*   
+HOME
+_______________________*/
+
+
+#home-links{
+  text-align: center;
+}
+#cohort-course-card{
+  margin-left: 19px;
+  margin-top: 5px;
+  box-shadow: 3px 5px 10px #6f6f6f96;
+  text-align: center;
+}
+
 
 
 /*
@@ -30,6 +45,7 @@ ____________________________________________
   position: sticky;
   top: 48px; /* Height of navbar */
   height: calc(100vh - 48px);
+  background-color:#009688;
   padding-top: .5rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
@@ -37,16 +53,16 @@ ____________________________________________
 
 .sidebar .nav-link {
   font-weight: 500;
-  color: #333;
+  color: #e4efee;
 }
 
 .sidebar .nav-link .feather {
   margin-right: 4px;
-  color: #999;
+  color: #e4efee;
 }
 
 .sidebar .nav-link.active {
-  color: #007bff;
+  color: #e4efee;
 }
 
 .sidebar .nav-link:hover .feather,
