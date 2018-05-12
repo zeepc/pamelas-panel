@@ -1,8 +1,6 @@
 
-
-
-
-<%= form_for @user, url: user_path, html: { multipart: true }  do |f| %>  
+<div class="row new">
+<%= form_for @user  do |f| %>  
     <%= f.label :first_name %>  
     <%= f.text_field :first_name %>  
     <%= f.label :last_name %>  
@@ -14,10 +12,12 @@
     <%= f.label :age %>  
     <%= f.number_field :age %>
     <%= f.label :degree %>  
-    <%= f.text_field :degree %>
+    <%= f.select :degree, ['HS','Undergrad' ,'Masters', 'PhD']%>
     <%= f.label :role %>  
-    <%= f.text_field :role %>
+    <%= f.select :role, ['Instructor','Student' ,'Administrator']%>
     <%= f.label :avatar %> 
     <%= f.file_field :avatar %>
     <%= f.submit %>
 <% end %>
+
+</div>

@@ -34,8 +34,10 @@
           
         </div>
 
-        <!-- <button type="button" class="btn btn-light"><a href="/users">Users</a></span></button> -->
-      <!-- <button type="button" class="btn btn-light"><a href="/users">Cohorts</a></button> -->
+        <a class="nav-link" href="/users/new">
+          <span data-feather="users"></span>
+                  New User
+        </a>
       </div>
   </div>
 </div>
@@ -53,7 +55,8 @@
       <th scope="col">Email</th>
       <th scope="col">Degree</th>
       <th scope="col">Role</th>
-       <th scope="col">Edit Info</th>
+      <th scope="col">Edit Info</th>
+      <th scope="col">Assign Cohort</th>
 
     </tr>
   </thead>
@@ -66,7 +69,9 @@
       <td><%= user.email %></td>
       <td><%= user.degree%></td>
       <td><%= user.role %></td>
-       <td><a href="/users/<%= user.id %>/edit">Edit</a></td>
+      <td><a href="/users/<%= user.id %>/edit">Edit</a></td>
+     
+
     </tr>
     <% end %>
   </tbody>

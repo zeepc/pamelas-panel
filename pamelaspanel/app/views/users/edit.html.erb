@@ -1,7 +1,4 @@
-
-
-
-
+<div class="row edit">
 <%= form_for @user, url: user_path, html: { multipart: true } do |f| %>  
     <%= f.label :first_name %>  
     <%= f.text_field :first_name, value: @user.first_name %>  
@@ -14,9 +11,9 @@
     <%= f.label :age %>  
     <%= f.number_field :page , value: @user.age %>
     <%= f.label :degree %>  
-    <%= f.text_field :degree, value: @user.degree %>
+    <%= f.select :degree, ['HS','Undergrad' ,'Masters','PhD'] %>
     <%= f.label :role %>  
-    <%= f.text_field :role, value: @user.role %>
+    <%= f.select :role,['Instructor','Student' ,'Administrator'] %>
     <%= f.label :avatar %> 
     <%= f.file_field :avatar, value: @user.avatar_file_name %>
     <%= f.submit %>
@@ -24,4 +21,6 @@
 
 
 <%= link_to 'Delete', user_path(@user), method: :delete %> 
+
+</div>
 

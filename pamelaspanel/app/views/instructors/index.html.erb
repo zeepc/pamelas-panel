@@ -52,6 +52,7 @@
       <th scope="col">Role</th>
       <th scope="col">Profile</th>
       <th scope="col">Edit Info</th>
+      <th scope="col">Assign Cohort</th>
     </tr>
   </thead>
   <tbody>
@@ -63,8 +64,10 @@
       <td><%= inst.email %></td>
       <td><%= inst.degree%></td>
       <td><%= inst.role %></td>
-      <td><a href="/instructors/<%= inst.id %>">View</a>
-      <td><a href="/users/<%= inst.id %>/edit">Edit</a>
+      <td><a href="/instructors/<%= inst.id %>">View</a></td>
+      <td><a href="/users/<%= inst.id %>/edit">Edit</a></td>
+      <td><a href="/assign/instructors/<%= inst.id %>">Assign</a>
+    <a href="/assign/instructors/<%= inst.id %>/edit">Update</a></td>
     </tr>
     <% end %>
   </tbody>

@@ -9,17 +9,16 @@ class InstructorsController < ApplicationController
 
 
 	def  show
-		# @instructor = User.where(role: 'Instructor')
+		@instructor = User.find(params[:id])
 		# @user_instructor = User.where(role: 'Instructor')
 	end
 
 	def new
-		@instructor = User.new
-		
+		@instructor = User.new		
 	end
 
 	def create
-		@instructor = User.create(cohort_params)
+		@instructor = User.create(user_params)
 		redirect_to '/instructors'
 	end
 
@@ -30,7 +29,7 @@ class InstructorsController < ApplicationController
 
     def update
         @instructor = User.find(params[:id])
-        @instructor.update(cohort_params)
+        @instructor.update(user_params)
         redirect_to '/instructors'
     end
 

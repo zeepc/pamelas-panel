@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	# layout 'layout'
+
 
 	def index
 		# puts "i am in path /users"

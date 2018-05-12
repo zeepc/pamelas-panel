@@ -45,7 +45,7 @@ class StudentsController < ApplicationController
     # list between create and update. Also, you can specialize this method
     # with per-user checking of permissible attributes.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email , :password, :age, :degree, :role)
+      params.require(:user).permit(:first_name, :last_name, :email , :password, :age, :degree, :role, :avatar)
     end
 
 end
