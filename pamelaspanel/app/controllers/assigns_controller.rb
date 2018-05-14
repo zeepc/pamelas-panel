@@ -1,4 +1,4 @@
-class AssignController < ApplicationController
+class AssignsController < ApplicationController
 
 
 	# def show
@@ -29,9 +29,8 @@ class AssignController < ApplicationController
 
     def edit 
     	@user = User.find(params[:id])
-        @student = Student.find_by user_id: params[:id]
-        @instructor = Instructor.find_by user_id: params[:id])
-   
+        @student = Student.find_by(user_id: params[:id])
+        @instructor = Instructor.find_by(user_id: params[:id])
     end
 
     def update
@@ -55,11 +54,11 @@ class AssignController < ApplicationController
     # just a good pattern since you'll be able to reuse the same permit
     # list between create and update. Also, you can specialize this method
     # with per-user checking of permissible attributes.
- def student_params
-      params.require(:student).permit(:user_id, :cohort_id, :grade)
+    def student_params
+        params.require(:student).permit(:user_id, :cohort_id, :grade)
     end
 
- def instructor_params
-      params.require(:instructor).permit(:user_id, :cohort_id)
+    def instructor_params
+        params.require(:instructor).permit(:user_id, :cohort_id)
     end
 end

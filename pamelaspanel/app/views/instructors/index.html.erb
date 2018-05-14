@@ -66,8 +66,10 @@
       <td><%= inst.role %></td>
       <td><a href="/instructors/<%= inst.id %>">View</a></td>
       <td><a href="/users/<%= inst.id %>/edit">Edit</a></td>
-      <td><a href="/assign/instructors/<%= inst.id %>">Assign</a>
-    <a href="/assign/instructors/<%= inst.id %>/edit">Update</a></td>
+      <td>
+        <a href="/assigns/instructors/<%= inst.id %>">Assign</a>
+        <a href="/assigns/instructors/<%= inst.id %>/edit">Update</a>
+      </td>
     </tr>
     <% end %>
   </tbody>

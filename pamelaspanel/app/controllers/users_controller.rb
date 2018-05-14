@@ -40,10 +40,6 @@ class UsersController < ApplicationController
     end
 
 
-
-
-
-
 	private
     # Using a private method to encapsulate the permissible parameters is
     # just a good pattern since you'll be able to reuse the same permit

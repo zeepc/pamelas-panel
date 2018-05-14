@@ -1,7 +1,7 @@
-<% if @user == @student_role %>
+<% if @user.role == 'Student' %>
 
    <%= render "shared/student" %>
-<% elsif  @user == @instructor_role %>
+<% elsif  @user.role == 'Instructor' %>
    
    <%= render "shared/instructor" %>
 

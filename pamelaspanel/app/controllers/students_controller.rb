@@ -17,7 +17,7 @@ class StudentsController < ApplicationController
 	end
 
 	def create
-		@student = User.create(user_params)
+		@student = User.create(student_params)
 		redirect_to '/students'
 	end
 
@@ -28,7 +28,7 @@ class StudentsController < ApplicationController
 
     def update
         @student = User.find(params[:id])
-        @student.update(user_params)
+        @student.update(student_params)
         redirect_to '/students'
     end
 
@@ -44,8 +44,10 @@ class StudentsController < ApplicationController
     # just a good pattern since you'll be able to reuse the same permit
     # list between create and update. Also, you can specialize this method
     # with per-user checking of permissible attributes.
-    def user_params
-      params.require(:user).permit(:first_name, :last_name, :email , :password, :age, :degree, :role, :avatar)
+    # def user_params
+    #   params.require(:user).permit(:first_name, :last_name, :email , :password, :age, :degree, :role, :avatar)
+    # end
+    def student_params
+        params.require(:student).permit(:user_id, :cohort_id, :grade)
     end
-
 end
