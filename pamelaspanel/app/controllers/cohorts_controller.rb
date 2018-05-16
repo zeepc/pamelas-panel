@@ -1,21 +1,18 @@
 class CohortsController < ApplicationController
 	
-	# layout 'layout'
 	
 	def index
-		puts "i am in path /COHORTS"
 		@cohort = Cohort.all
 	end
 
 
 	def  show
-		puts "I am in /COHORTS/id route"
 		@cohort = Cohort.find(params[:id])
 	end
 
 	def new
 		@cohort = Cohort.new
-		@course = Course.all
+		# @course = Course.all
 		
 	end
 
@@ -48,7 +45,6 @@ class CohortsController < ApplicationController
     # list between create and update. Also, you can specialize this method
     # with per-user checking of permissible attributes.
     def cohort_params
-      params.require(:cohort).permit(:name, :start, :end , :course_id)
+      params.require(:cohort).permit(:name, :start, :end, :course_id)
     end
-
 end

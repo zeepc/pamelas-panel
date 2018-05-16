@@ -1,13 +1,6 @@
 class AssignsController < ApplicationController
 
 
-	# def show
-	# 	@user = User.find(params[:id])
-	# 	@student = User.where(role: 'Student')
-	# 	@instructor =User.where(role: 'Instructor')
-
-	# end
-
 	
 	def new
 		@user = User.find(params[:id])
@@ -43,8 +36,10 @@ class AssignsController < ApplicationController
 
 
     def destroy
-        Student.find(params[:id]).destroy
-        Instructor.find(params[:id]).destroy
+        @student = Student.find(params[:id])
+        @student.destroy
+        @insructor = Instructor.find(params[:id])
+        @insructor.destroy
         redirect_to '/users'
     end
 

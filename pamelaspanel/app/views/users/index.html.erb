@@ -32,12 +32,7 @@
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat.</p>
           
-        </div>
-
-        <a class="nav-link" href="/users/new">
-          <span data-feather="users"></span>
-                  New User
-        </a>
+        </div>    
       </div>
   </div>
 </div>
@@ -56,19 +51,24 @@
       <th scope="col">Degree</th>
       <th scope="col">Role</th>
       <th scope="col">Edit Info</th>
+      <th scope="col">Delete</th>
+
 
     </tr>
   </thead>
   <tbody>
   	<% @user.each do |user| %>
-    <tr>
+    <tr id="user">
       <th scope="row"><%= user.id %></th>
       <td><%= user.first_name %></td>
       <td><%= user.last_name %></td>
       <td><%= user.email %></td>
       <td><%= user.degree%></td>
       <td><%= user.role %></td>
-      <td><a href="/users/<%= user.id %>/edit">Edit</a></td>
+      <td>
+        <a href="/users/<%= user.id %>/edit">Edit</a></td>
+        <td><%= link_to 'Delete', user_path(user), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %>
+      </td>
      
 
     </tr>

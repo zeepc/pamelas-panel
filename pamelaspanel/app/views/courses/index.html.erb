@@ -1,6 +1,6 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Welcome, Zee</h1>
+    <h1 class="display-4">Zee's Dashboard</h1>
       <div class="home-menu">
         <div class="row">
 
@@ -25,17 +25,6 @@
                   Courses
             </a>
         </div>
-
-        <div class="home-side">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.</p>
-          
-        </div>
-
-        <!-- <button type="button" class="btn btn-light"><a href="/users">Users</a></span></button> -->
-      <!-- <button type="button" class="btn btn-light"><a href="/users">Cohorts</a></button> -->
       </div>
   </div>
 </div>
@@ -49,7 +38,6 @@
     <h5 class="card-title"><%= course.name %></h5>
     <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
      <p class="card-text">Total Hours: <%= course.total_hrs %></p>
-    <a href="/courses/<%= course.id %>" class="card-link">Profile</a>
     <a href="/courses/<%= course.id %>/edit" class="card-link">Edit</a>
   </div>
 </div>

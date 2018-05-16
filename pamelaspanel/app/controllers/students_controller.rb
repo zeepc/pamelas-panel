@@ -12,12 +12,13 @@ class StudentsController < ApplicationController
 		puts "I am in /students/id route"
 		@student =User.where(role: 'Student')
 	end
-		def new
+    
+    def new
 		@student =User.new	
 	end
 
 	def create
-		@student = User.create(student_params)
+		@student = Student.create(student_params)
 		redirect_to '/students'
 	end
 

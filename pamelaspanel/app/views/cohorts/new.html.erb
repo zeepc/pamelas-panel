@@ -1,3 +1,5 @@
+<h1>New Cohort</h1>
+
 <%= form_for @cohort do |f| %>  
     <%= f.label :name %>  
     <%= f.text_field :name %>  
@@ -9,14 +11,3 @@
     <%= f.number_field :end %> 
     <%= f.submit %>
 <% end %>
-
-<!-- <form>
-	<div class="form-group">
-    <label for="exampleFormControlSelect1">Assign Course</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      < @course.each do|course| %>
-      <option><= course.name %></option> 
-      < end %>
-    </select>
-  </div>
-</form> -->

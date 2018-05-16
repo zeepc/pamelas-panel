@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
 
-
 	def index
 		# puts "i am in path /users"
 		@user =User.all
@@ -35,8 +34,8 @@ class UsersController < ApplicationController
 
 
     def destroy
-        User.find(params[:id]).destroy
-        redirect_to '/users'
+         User.find(params[:id]).destroy
+         redirect_to '/users'
     end
 
 
