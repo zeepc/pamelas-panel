@@ -1,24 +1,13 @@
-# README
+# Pamelas School Admin Panel
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Admin panel for a fictitious coding school whereby the administrator can create users, cohorts and courses.
 
-Things you may want to cover:
 
-* Ruby version
+Technologies Utilized:
 
-* System dependencies
+* Ruby 2.3.0
 
-* Configuration
+* Rails  5.2.0
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
