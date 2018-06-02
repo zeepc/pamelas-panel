@@ -19,7 +19,7 @@ Admin panel for a fictitious coding school whereby the administrator can create 
 ![Cohorts page](app/assets/images/cohorts.png?raw=true)*Cohorts cards*
 
 
-Technologies Utilized:
+## Technologies Utilized
 
 * Ruby 2.3.0
 
@@ -31,7 +31,7 @@ Technologies Utilized:
 
 * Bootstrap
 
-Acknowledgements
+## Acknowledgements
 
 [Paperclip](https://github.com/thoughtbot/paperclip)
 
