@@ -2,7 +2,7 @@
 
 Admin panel for a fictitious coding school whereby the administrator can create users, cohorts and courses.
 
-![screenrecording](images/pamelaspanel.mov)
+![screenrecording](assets/pamelaspanel.mov)
 
 Technologies Utilized:
 
