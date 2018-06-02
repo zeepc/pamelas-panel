@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post "/assigns/students/:id", to: "assigns#update"
   post "/assigns/instructors/:id", to: "assigns#update"
 
+  root :to => "home#index"
+
   resources :home
     get "/home/login", to: "home#login"
     post "/home/login", to: "home#login"
