@@ -2,11 +2,17 @@
 
 Admin panel for a fictitious coding school whereby the administrator can create users, cohorts and courses.
 
-![home](assets/home.png)*Home page*
-![users](assets/users.png)*Users list*
-![instructors](assets/instructors.png)*Instructors list*
-![instructor](assets/instructor.png)*Individual Instructor information*
-![cohorts](assets/cohorts.png)*Cohorts cards*
+# Screenshots
+
+![Home page](/app/assets/images/home.png?raw=true)*Home page*
+
+![Users page](/app/assets/images/users.png?raw=true)*Users list*
+
+![Instructors page](app/assets/images/instructors.png?raw=true)*Instructors list*
+
+![Instructor view](app/assets/images/instructor.png?raw=true)*Individual Instructor information*
+
+![Cohorts page](app/assets/images/cohorts.png?raw=true)*Cohorts cards*
 
 Technologies Utilized:
 
