@@ -34360,3 +34360,49 @@ Processing by InstructorsController#index as HTML
 Completed 200 OK in 77ms (Views: 70.5ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-02 12:25:08 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/zee/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 331ms (Views: 317.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-06-02 12:25:26 -0400
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:60
+  Rendered users/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 92ms (Views: 64.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/instructors" for 127.0.0.1 at 2018-06-02 12:25:35 -0400
+Processing by InstructorsController#index as HTML
+  Rendering instructors/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "Instructor"]]
+  ↳ app/views/instructors/index.html.erb:59
+  Rendered instructors/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 66ms (Views: 60.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/instructors/1" for 127.0.0.1 at 2018-06-02 12:25:39 -0400
+Processing by InstructorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/instructors_controller.rb:12
+  Rendering instructors/show.html.erb within layouts/application
+  Rendered instructors/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 54ms (Views: 44.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cohorts" for 127.0.0.1 at 2018-06-02 12:25:50 -0400
+Processing by CohortsController#index as HTML
+  Rendering cohorts/index.html.erb within layouts/application
+  [1m[36mCohort Load (0.6ms)[0m  [1m[34mSELECT "cohorts".* FROM "cohorts"[0m
+  ↳ app/views/cohorts/index.html.erb:36
+  Rendered cohorts/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 66ms (Views: 50.8ms | ActiveRecord: 4.0ms)
+
+
