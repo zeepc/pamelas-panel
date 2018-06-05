@@ -1,6 +1,7 @@
 # Pamelas School Admin Panel
 
 Admin panel for a fictitious coding school whereby the administrator can create users, cohorts and courses.
+https://zee-admin.herokuapp.com/courses
 
 # Screenshots
 
